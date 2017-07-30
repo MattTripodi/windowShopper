@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -45,27 +50,66 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVv-D7-lNi">
+                                <rect key="frame" x="20" y="300" width="335" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF2-R6-Zqx">
+                                <rect key="frame" x="121" y="376.5" width="133" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="P9b-dy-HmT"/>
+                                    <constraint firstAttribute="height" constant="37" id="Sed-4t-0Jl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-mO-IDK">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zs8-PJ-CTj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalcPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nkr-uP-WB2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SVv-D7-lNi" firstAttribute="top" secondItem="spo-75-F7S" secondAttribute="bottom" constant="45" id="03E-fp-rfX"/>
                             <constraint firstItem="BZ4-Bu-C59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ue-j7-mpM"/>
+                            <constraint firstItem="xs3-mO-IDK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7VU-GC-LWI"/>
+                            <constraint firstItem="SF2-R6-Zqx" firstAttribute="top" secondItem="SVv-D7-lNi" secondAttribute="bottom" constant="5" id="7wT-Jn-naj"/>
                             <constraint firstItem="spo-75-F7S" firstAttribute="height" secondItem="OPX-re-QH2" secondAttribute="height" id="BAy-vB-AWp"/>
                             <constraint firstItem="sBf-Ht-erR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GUb-dg-I6u"/>
                             <constraint firstItem="sBf-Ht-erR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HIp-lS-4Jf"/>
                             <constraint firstItem="sBf-Ht-erR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NiA-su-hlW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xs3-mO-IDK" secondAttribute="trailing" constant="20" id="Q98-fK-p9Y"/>
                             <constraint firstItem="BZ4-Bu-C59" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="QN1-vQ-btQ"/>
                             <constraint firstItem="OPX-re-QH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xrx-MF-jDz"/>
                             <constraint firstItem="spo-75-F7S" firstAttribute="trailing" secondItem="OPX-re-QH2" secondAttribute="trailing" id="ZYF-4G-H6M"/>
                             <constraint firstItem="sBf-Ht-erR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a0m-us-zeC"/>
                             <constraint firstItem="spo-75-F7S" firstAttribute="leading" secondItem="OPX-re-QH2" secondAttribute="leading" id="aeh-Fx-eyQ"/>
+                            <constraint firstItem="SF2-R6-Zqx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cTb-M5-3GY"/>
                             <constraint firstItem="spo-75-F7S" firstAttribute="top" secondItem="OPX-re-QH2" secondAttribute="bottom" constant="25" id="j8V-cY-9o2"/>
+                            <constraint firstItem="SVv-D7-lNi" firstAttribute="width" secondItem="spo-75-F7S" secondAttribute="width" id="kkn-kx-SJr"/>
                             <constraint firstItem="OPX-re-QH2" firstAttribute="top" secondItem="BZ4-Bu-C59" secondAttribute="bottom" constant="35" id="pXy-h2-gpc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OPX-re-QH2" secondAttribute="trailing" constant="20" id="sj5-qP-ey2"/>
+                            <constraint firstItem="SVv-D7-lNi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u06-pc-hFn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xs3-mO-IDK" secondAttribute="bottom" constant="20" id="zkp-bl-qgX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="SF2-R6-Zqx" id="kW8-nI-3Dp"/>
                         <outlet property="priceTxt" destination="spo-75-F7S" id="Wp5-k3-VHm"/>
+                        <outlet property="resultLbl" destination="SVv-D7-lNi" id="YoV-0T-G1B"/>
                         <outlet property="wageTct" destination="OPX-re-QH2" id="HIf-HJ-dh0"/>
                     </connections>
                 </viewController>
